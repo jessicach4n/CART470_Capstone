@@ -23,7 +23,9 @@ During class, we defined a set of questions we would like to ask Gabriel to help
 - [Experiments with Google](https://experiments.withgoogle.com/experiments)
 
 ## Meeting with Gabriel
-I was not able to attend the meeting with Gabriel, but I went through the notes my teammates took and the main points I gathered are:
+I was not able to attend the meeting with Gabriel, but I went through the <a url="files/meeting_notes_gabriel.html">notes</a> my teammates took and included some comments to be discussed at our next meeting. 
+
+The main points I gathered are:
 - The project is a web app that allows the audience to use their phones as speakers to be part of a orchestra made of phones.
 - We will focus on developing the web app with Javascript and it will be used as a base for students in his audio class to fork and adapt to their own projects.
 - It does not need to have much interactivity in regards to the UI, it will be used mostly as a tool to diffuse sound.
