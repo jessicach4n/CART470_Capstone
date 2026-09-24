@@ -4,5 +4,4 @@ I will be documenting the process for creating the Distributed Listening Web App
 
 ## Journal Entries
 - Week 2 - [Brainstorming and Ideation](https://github.com/jessicach4n/CART470_Capstone/tree/entry-wk-2)
-
 - Week 3 - [Proof of Concept and Testing](https://github.com/jessicach4n/CART470_Capstone/tree/entry-wk-3)
