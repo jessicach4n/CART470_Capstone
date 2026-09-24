@@ -1,4 +1,4 @@
-# Brainstorming
+# Week 2 - Brainstorming
 ## Ideation
 ### Questions to ask the stakeholder
 During class, we defined a set of questions we would like to ask Gabriel to help us understand the project better. These questions aim to define the scope of the project and the technical needs.
