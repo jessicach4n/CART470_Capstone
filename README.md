@@ -1,4 +1,4 @@
-# Week 6 - Coding the interface and necessary features for the Nov3rd submission
+# Week 6 - Coding the interface and necessary features for the submission on Nov 3rd
 
 ## Meeting with Gabriel
 In this week's meeting with Gabriel, we were able to play a full musical piece from a score created by Eamon with music he composed. We played the piece synchronously on 5 devices and it worked well. Gabriel seemed happy with the progress we made and made the following suggestions for the next steps:
