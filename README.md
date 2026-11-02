@@ -1,50 +1,35 @@
-# Week 6 - Coding the interface and necessary features for the submission on Nov 3rd
+# Week 6 - The Curve Ball
 
 ## Meeting with Gabriel
-In this week's meeting with Gabriel, we were able to play a full musical piece from a score created by Eamon with music he composed. We played the piece synchronously on 5 devices and it worked well. Gabriel seemed happy with the progress we made and made the following suggestions for the next steps:
-- Before we do any user testing, we have to make sure the latency is dealt with. He suggested pinging each client and having the server calculate the delay so that we can adjust the playback time accordingly.
-  - He suggested testing the implementation with a metronome to time the delays perfectly.
-- We suggested having a way for users to test the effects they are adding to their piece by allowing sample playbacks of the effects on their sound files directly in the JSON generator form. He approved of this idea.
-- He also suggested that we have a page that explains how to use the application.
+We met with Gabriel and showed him what we have successfully implemented so far, which included all the minimum requirements he wanted for the initially set deadline of November 3rd. 
 
-## Meeting with Sabine
-After our meeting with Sabine, we realized a few points that we need to address:
-- We need to be able to kick out a user connected to the conductor page. There should only be one conductor at a time, and if a new user tries to connect as a conductor, the previous one should be kicked out. Or, we can hide the conductor button if there is already a conductor connected. 
-- We have to have a way to handle the uploading of the sound files and the JSON files properly. 
-- We should also be able to disconnect the phones.
+We were able to show him a working version of the JSON generator, the conductor view, and the phone view. 
+[Our application](https://jessicach4n.github.io/Distributed_Listening/) included the following features:
+- The JSON generator allows the user to upload audio files and fill out the fields in the form. It then generates a JSON file that contains the information from the form and the audio files all packaged in a single zip file. This structure would allow us to easily upload the folders to the repository and have the application read the files properly.
+- The conductor view allows the user to select the piece to play, see the list of groups and the number of phones connected in each group, as well as display a QR code for phones to scan and connect to the application.
+- The phone view allows the user to connect to the application by scanning the QR code, join a group and be notified when the conductor starts the piece of the audio assigned to their group ID.
+<video src="demo.mov" controls></video>
 
-## Packaging the audio files and JSON files
-We have to make sure that the audio files and the JSON files are packaged properly. Therefore, we decided that when the user uses the JSON generator, they upload their audio files to the form and fill out the fields. When they submit the form, it will download a zip file that contains the audio files and the JSON file. The user can then upload this zip file to the server by sending it to us or Gabriel (someone with write access to the GitHub repo). This way, we can ensure that the audio files and the JSON files are packaged together properly and we can rename the folders so that our application can read the files properly.
-![Sketch of file structure](./img/file_structure.jpg)
 
-## Next Steps
-We prioritized the tasks that we need to complete for the first submission. The following is a list of tasks that we need to complete and the person responsible for each task:
+## Gabriel's Feedback and Surprise Curve Ball
+Gabriel seemed happy with our progress and the features we implemented, but surprised us with a fully developed version of the application that he had been working on since September. He has already implemented the views we have been working on, as well as additional features that we have not yet implemented, such as a visual representation of the audio in a waveform, a reactive phone view changes based on the audio being played similar to what we hoped to acheive with p5, latency compensation and live adjustement of the speed and volume of the audio, dark and light modes, and more. 
 
-- Jess:
-  - Landing page
-  - Conductor global view + QR code
-  - Conductor smaller view
-  - Phone logic to be able to kick people out (websocket disconnect)
+We also learned that this will be the version that he plans to use in his class, which affects our initial plan to do user testing in the coming weeks with his students on our version of the application.
 
-- Victoria:
-  - Be able to upload the sound files in the JSON form so that when the JSON is generated, you get a package that includes all sound files and the JSON.
-  - Upload/download package
+Given this new information, we will have to fork his version of the application to add features that he wants to implement. This includes:
+- Effects and filters for the audio
+- Fetching audio files from a external source instead uploading them to the application
+- Implementing a form generator like ours
 
-- Sabrina:
-  - Implement CSS for the JSON HTML based on the Figma design
-  - Slider for JSON
-  - Remove one of the audio file name input fields since we no longer need the file path.
-  - Phone pages: add an interaction button and group name. Don’t move the play and pause buttons.
-
-- Leah:
-  - Implement HTML page for the guide (user flow explained in detail)
-  - Finish all the designs
-
-- Eamon:
-  - Restructure folder to accommodate packages
-  - Sample sound in the form (low priority/optional)
-
-This is a soft deadline for these tasks, since we have another week before the first submission. Next week, Gabriel will try to come in person to test the application with us during client meetings.
+Eamon worked on these features this week and met with Gabriel to get his feedback on the implementation. The features were approved by Gabriel and he was happy to see the changes Eamon made to the application.
 
 ## Communication and Collaboration
-We have been using Discord to keep each other updated on our progress and to ask questions. We also use comments directly in Figma to ask questions and clarify the interface. Lastly, the team has the habit of informing others when a person makes a PR and would like it to be reviewed so we are aware of the changes in the repository.
+We felt that there was a miscommunication between us and Gabriel regarding the expectations of the project. We were under the impression that we were working on implementing the base of the application and that the additional features would be implemented later. To move forward, we will have to rethink the roles of the team and how we can contribute to his project while maintaining our own version. 
+
+Despite this, we understand that Gabriel needs a solid version that he can rely on for his class. What we have learned from building our own version isn't wasted.
+
+## Next Steps
+Since we would like to continue advancing our project, we will continue to work on it as planned, but also focus on helping Gabriel with his version of the application after he gets feedback from his students. Since we will not directly do user testing, Gabriel will do the demo with his students and he will give us their feedback. We will then use this feedback to improve both application.
+
+We also are working on the miderm presentation and will be preparing a demo of our application to show the class. 
+
