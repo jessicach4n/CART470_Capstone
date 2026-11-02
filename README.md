@@ -21,7 +21,7 @@ Given this new information, we will have to fork his version of the application 
 - Fetching audio files from a external source instead uploading them to the application
 - Implementing a form generator like ours
 
-Eamon worked on these features this week and met with Gabriel to get his feedback on the implementation. The features were approved by Gabriel and he was happy to see the changes Eamon made to the application.
+I initially started working on fetching audio from external sources, such as public GitHub repositories. However, I encountered CORS violations because the hosting server did not allow requests from the Phase Study website (Gabriel's application) or from our own application. In the end, Eamon successfully implemented that feature and met with Gabriel to get his feedback on the implementation.
 
 ## Communication and Collaboration
 We felt that there was a miscommunication between us and Gabriel regarding the expectations of the project. We were under the impression that we were working on implementing the base of the application and that the additional features would be implemented later. To move forward, we will have to rethink the roles of the team and how we can contribute to his project while maintaining our own version. 
