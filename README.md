@@ -1,4 +1,4 @@
-# Week 6 - The Curve Ball
+# Week 7 - The Curve Ball
 
 ## Meeting with Gabriel
 We met with Gabriel and showed him what we have successfully implemented so far, which included all the minimum requirements he wanted for the initially set deadline of November 3rd. 
