@@ -1,35 +1,23 @@
-# Week 7 - The Curve Ball
+# Week 8 - Post Midterm
 
 ## Meeting with Gabriel
-We met with Gabriel and showed him what we have successfully implemented so far, which included all the minimum requirements he wanted for the initially set deadline of November 3rd. 
+We did not have a meeting with Gabriel as a teamm this week, but Eamon met with him to show the progress he made in adding some of the features Gabriel requested such as fetching audio files from external sources, audio effects and implementing a form generator. 
 
-We were able to show him a working version of the JSON generator, the conductor view, and the phone view. 
-[Our application](https://jessicach4n.github.io/Distributed_Listening/) included the following features:
-- The JSON generator allows the user to upload audio files and fill out the fields in the form. It then generates a JSON file that contains the information from the form and the audio files all packaged in a single zip file. This structure would allow us to easily upload the folders to the repository and have the application read the files properly.
-- The conductor view allows the user to select the piece to play, see the list of groups and the number of phones connected in each group, as well as display a QR code for phones to scan and connect to the application.
-- The phone view allows the user to connect to the application by scanning the QR code, join a group and be notified when the conductor starts the piece of the audio assigned to their group ID.
-<video src="demo.mov" controls></video>
+Victoria and Eamon also assisted in Gabriel's demo of his application to his students. From what I gathered, the students did not have feedback on the application yet, because they spent the rest of the class trying to download Node.js and set up the application on their local machine. 
+It is unclear to me why he decided to have the students set up the application locally since they apparently had a lot of trouble doing so. We are offering our help to Gabriel if he wants us to attend his classes to help the students set up, but nothing has been decided yet.
 
-
-## Gabriel's Feedback and Surprise Curve Ball
-Gabriel seemed happy with our progress and the features we implemented, but surprised us with a fully developed version of the application that he had been working on since September. He has already implemented the views we have been working on, as well as additional features that we have not yet implemented, such as a visual representation of the audio in a waveform, a reactive phone view changes based on the audio being played similar to what we hoped to acheive with p5, latency compensation and live adjustement of the speed and volume of the audio, dark and light modes, and more. 
-
-We also learned that this will be the version that he plans to use in his class, which affects our initial plan to do user testing in the coming weeks with his students on our version of the application.
-
-Given this new information, we will have to fork his version of the application to add features that he wants to implement. This includes:
-- Effects and filters for the audio
-- Fetching audio files from a external source instead uploading them to the application
-- Implementing a form generator like ours
-
-I initially started working on fetching audio from external sources, such as public GitHub repositories. However, I encountered CORS violations because the hosting server did not allow requests from the Phase Study website (Gabriel's application) or from our own application. In the end, Eamon successfully implemented that feature and met with Gabriel to get his feedback on the implementation.
-
-## Communication and Collaboration
-We felt that there was a miscommunication between us and Gabriel regarding the expectations of the project. We were under the impression that we were working on implementing the base of the application and that the additional features would be implemented later. To move forward, we will have to rethink the roles of the team and how we can contribute to his project while maintaining our own version. 
-
-Despite this, we understand that Gabriel needs a solid version that he can rely on for his class. What we have learned from building our own version isn't wasted.
+## Midterm Presentation
+The presentation went well, most notably, we were able to test our version of the applicatioon with the 22 phones of the students in the class. The feedback was positive since it was a pretty seamless experience to join the session and play the piece. We were surprised by how well it performed with that many devices and we were happy with how it sounded. We don't think it is necessary to implement the latency compensation feature since the experience was synchronous enough for the students to play together. Also, the latency that Gabriel adjusts for doesn't seem to go over 10ms at most, which is not noticeable.
 
 ## Next Steps
-Since we would like to continue advancing our project, we will continue to work on it as planned, but also focus on helping Gabriel with his version of the application after he gets feedback from his students. Since we will not directly do user testing, Gabriel will do the demo with his students and he will give us their feedback. We will then use this feedback to improve both application.
+We discussed what we would like to present at the final presentation, and we have decided that we would like to focus on a exhibition style presentation where we will perform one of our pieces with the students in class as participants with their phones.
+Since that will be our end goal, we will focus on finishing features that students in our class with directly interect with, in other words, the phone interface. 
 
-We also are working on the miderm presentation and will be preparing a demo of our application to show the class. 
+Since our JSON form generator won't be used in our use case and a copy of the feature is in progress in Gabriel's application, we may leave it as it is rather than trying to add css styling. We can use that energy to focus on the phone interface and the audio effects.
+
+We discussed potentially making a p5 animation each, so 5 different animations, that can be then associated to each groupings of phones. For example, if we have 5 groups of phones, each group can have a different animation that is triggered by the audio from the phones in that group. This will make the experience more visually engaging for the students.
+
+Another thing we need to work on is preventing the phone from going to sleep while the application is running. We will look into ways to prevent this from happening, since it would be disruptive to the experience if a phone goes to sleep in the middle of a performance. Gabriel suggested playing a 1px video in the background to prevent the phone from going to sleep, but we will look into other options as well.
+
+We also want to further develop the conductor interface and integrate more features such as a waveform for the audio being played, kicking out phones from the session and finishing the CSS.
 
