@@ -12,3 +12,4 @@ I will be documenting the process for creating the Distributed Listening Web App
 - Week 5 - [Working towards a working prototype](https://github.com/jessicach4n/CART470_Capstone/tree/entry-wk-5)
 - Week 6 - [Coding the interface and necessary features for the Nov3rd submission](https://github.com/jessicach4n/CART470_Capstone/tree/entry-wk-6)
 - Week 7 - [The Curve Ball](https://github.com/jessicach4n/CART470_Capstone/tree/entry-wk-7)
+- Week 8 - [Post Midterm](https://github.com/jessicach4n/CART470_Capstone/tree/entry-wk-8)
