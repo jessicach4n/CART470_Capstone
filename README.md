@@ -1,35 +1,49 @@
-# Week 7 - The Curveball
+# Week 10 - Moving Forward
 
 ## Meeting with Gabriel
-We met with Gabriel and showed him what we have successfully implemented so far, which included all the minimum requirements he wanted for the initially set deadline of November 3rd. 
+Gabriel surprised us by meeting with us in person. We had a productive meeting during which we clarified our plans for the following week and discussed whether he wanted our help continuing development of his version of the project.
 
-We were able to show him a working version of the JSON generator, the conductor view, and the phone view. 
-[Our application](https://jessicach4n.github.io/Distributed_Listening/) included the following features:
-- The JSON generator allows the user to upload audio files and fill out the fields in the form. It then generates a JSON file that contains the information from the form and the audio files, all packaged in a single zip file. This structure would allow us to easily upload the folders to the repository and have the application read the files properly.
-- The conductor view allows the user to select the piece to play, see the list of groups and the number of phones connected in each group, as well as display a QR code for phones to scan and connect to the application.
-- The phone view allows the user to connect to the application by scanning the QR code, join a group and be notified when the conductor starts the piece of audio assigned to their group ID.
-<video src="demo.mov" controls></video>
+We discussed several issues he has noticed while using the application and wishes to improve:
+- During testing, he wants to avoid opening one tab per phone client and clicking "Join" in each tab.
+- He wants to control the sound output and map it to specific speakers in the sound room at the library, where he will conduct the final performance for his class.
+- Add a convenient spacebar shortcut to play and stop the audio.
+- Enable live editing of the score through a visual display rather than a JSON form.
+- Allow audio files to be fetched from any provider.
+- Improve the audio.
 
+## Tasks & GitHub Issues
+Gabriel merged the three active pull requests that were waiting for his review in this repository. The merges included:
+- Audio effects
+- Editor for the JSON score
+- Score playback and removing unused features
 
-## Gabriel's Feedback and Surprise Curveball
-Gabriel seemed happy with our progress and the features we implemented, but surprised us with a fully developed version of the application that he had been working on since September. He has already implemented the views we have been working on, as well as additional features that we have not yet implemented, such as a visual representation of the audio in a waveform, a reactive phone view that changes based on the audio being played, similar to what we hoped to achieve with p5, latency compensation and live adjustment of the speed and volume of the audio, dark and light modes, and more. 
+We added the pain points discussed during the meeting as issues in our forked repository and assigned several of them to team members. We also continued to contribute to Gabriel's repository. At the moment, we have three new pull requests waiting for his review:
+- Adding the Electron testing desktop app
+- Implementing spacebar playback
+- Implementing zoom in and out in the preview timeline
 
-We also learned that this will be the version that he plans to use in his class, which affects our initial plan to do user testing in the coming weeks with his students on our version of the application.
+We met up on a Friday to work on these issues together.
 
-Given this new information, we will have to fork his version of the application to add features that he wants to implement. This includes:
-- Effects and filters for the audio
-- Fetching audio files from an external source instead of uploading them to the application
-- Implementing a form generator like ours
+## Electron App Executable
+The purpose of the Electron app is to allow testing the app without opening a browser and server. The app runs in a desktop environment and makes it possible to test the audio-reactive UI with multiple clients. This eliminates the need to open multiple browser tabs and click "Join" in each one.
 
-I initially started working on fetching audio from external sources, such as public GitHub repositories. However, I encountered CORS violations because the hosting server did not allow requests from the Phase Study website (Gabriel's application) or from our own application. In the end, Eamon successfully implemented that feature and met with Gabriel to get his feedback on the implementation.
+We were able to generate executables for Windows and macOS. I uploaded the macOS version to [Google Drive](https://drive.google.com/file/d/1BnCpM8tB0PngeRo3-Nl4-G2_1yD6MV5F/view?usp=sharing).
 
-## Communication and Collaboration
-We felt that there was a miscommunication between us and Gabriel regarding the expectations of the project. We were under the impression that we were working on implementing the base of the application and that the additional features would be implemented later. To move forward, we will have to rethink the roles of the team and how we can contribute to his project while maintaining our own version. 
+We will show the app to Gabriel at our next meeting and gather his feedback. Once he approves it, we will upload it to his repository. However, we will wait to see whether he asks us to make changes beforehand.
 
-Despite this, we understand that Gabriel needs a solid version that he can rely on for his class. What we have learned from building our own version isn't wasted.
+## Progress on our version of the app
+Leah and Sabrina presented their wireframes for the reactive UI to the team:
+
+![Leah's wireframe](img/leah-wireframe.png)
+
+![Sabrina's wireframe](img/sabrina-wireframe.png)
+
+After viewing the wireframes for the phone view of the audio-reactive UI, Sabrina implemented a first iteration of the UI in our app using p5.js. The team tested it together and was very excited by the result.
 
 ## Next Steps
-Since we would like to continue advancing our project, we will continue to work on it as planned, but also focus on helping Gabriel with his version of the application after he gets feedback from his students. Since we will not directly do user testing, Gabriel will do the demo with his students and he will give us their feedback. We will then use this feedback to improve both applications.
+We have three more active issues in the forked repository that we plan to address:
+- Fix small issues with sound and effect limits, ranges, and units.
+- Fetch or download audio files from a central repository.
+- Live-edit the score preview.
 
-We are also working on the midterm presentation and will be preparing a demo of our application to show the class. 
-
+We will also continue working on our project. We booked the Holodeck for the presentation day and would like to create an experience similar to the one shown in [Victoria's Pinterest mood board](https://ca.pinterest.com/twentyeighttimes/distributed-listening/?invite_code=1d66dc10fb374c6d849a1e9790a3ef7c&sender=664210782451450500).
